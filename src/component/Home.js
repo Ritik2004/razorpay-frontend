@@ -5,8 +5,8 @@ const Home = () => {
  
     const checkoutHandler = async (amount) => {
 
-      const {data:{key}} = await axios.get("http://localhost:4000/api/getkey")
-      const {data :{order}} = await axios.post("http://localhost:4000/api/checkout",{
+      const {data:{key}} = await axios.get("https://nodejs-payment.onrender.com/api/getkey")
+      const {data :{order}} = await axios.post("https://nodejs-payment.onrender.com/api/checkout",{
             amount
          })
          const options = {
@@ -17,7 +17,7 @@ const Home = () => {
           description: "Test Transaction",
           image: "https://drive.google.com/file/d/1xyox0notTQiWRCsA_yEVrkTVZGRwwAp_/view?usp=sharing",
           order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-          callback_url: "http://localhost:4000/api/paymentverification",
+          callback_url: "https://nodejs-payment.onrender.com/api/paymentverification",
           prefill: {
               name: "Gaurav Kumar",
               email: "gaurav.kumar@example.com",

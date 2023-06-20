@@ -12,7 +12,7 @@ const Paymentsuccess = () => {
  
     <div className='order'>
       <h1>Order success</h1>
-      <h3>Reference nos:{referenceNum}</h3>
+      <h3>Reference nos.{referenceNum}</h3>
     </div>
     
   )
